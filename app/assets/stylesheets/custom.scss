@@ -1,0 +1,50 @@
+// CSSの仕様で、paddingなどの設定を行った場合、その要素全体のサイズが大きくなってしまうのを避ける
+* {
+  box-sizing: border-box;
+}
+
+// ここからheader
+.header {
+  display: flex;
+  height: 100px;
+  background-color: greenyellow;
+  text-align: center;
+  line-height: 100px;
+  &_left {
+    width: 300px;
+  }
+  &_middle {
+    flex: 1;
+  }
+  &_right {
+    min-width: 250px;
+  }
+}
+
+
+.wrapper {
+  min-height: calc(100vh - 150px);
+  display: flex;
+  &_aside{
+    width: 300px;
+    background-color: limegreen;
+  }
+}
+
+
+// ここからfooter
+.footer {
+  height: 50px;
+  background-color: seagreen;
+  display: flex;
+  &-nav {
+    display: flex;
+    font-size: 16px;
+    min-width: calc(100% /4 );
+    margin:0 auto;
+    line-height: 50px;
+  }
+  &-nav a {
+    text-decoration: none;
+  }
+}
