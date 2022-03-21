@@ -2,6 +2,10 @@
 * {
   box-sizing: border-box;
 }
+body {
+  background-image: image_url('summer1.jpg');
+  background-size: cover;
+}
 
 // ここからheader
 .header {
@@ -12,6 +16,10 @@
   line-height: 100px;
   &_left {
     width: 300px;
+    &_logo {
+      margin: 20px 10px 40px 20px;
+      border-radius: 20%;
+    }
   }
   &_middle {
     flex: 1;
@@ -24,26 +32,24 @@
 
 .wrapper {
   min-height: calc(100vh - 150px);
+  // min-width:  calc(100vh - 400px);
   display: flex;
   &_aside{
-    width: 300px;
+    width: 200px;
     background-color: limegreen;
   }
   &_main {
-    flex: 1;
-    background-image: url("summer1.jpg");
-    padding-left: 100px;
+  flex: 1;
     &_h1 {
-      text-align: center;
-      // vertical-align: middle;
-      font-size: 90px;
-    }
-    &_p{
-      font-size: 38px;
+    font-size: 100px;
+    padding-left: 50px;
+  }
+  &_p {
+    font-size: 38px;
+    padding-left: 50px;
     }
   }
 }
-
 
 // ここからfooter
 .footer {
