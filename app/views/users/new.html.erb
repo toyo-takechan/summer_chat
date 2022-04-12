@@ -5,10 +5,19 @@
     <h1>Summer Appへようこそ</h1>
     <h2>新規登録ページ</h2>
   <%= form_with(model: @user, local: true) do |f| %>
+
   <%= f.label :name, class:"form_label" %>
   <%= f.text_field :name, class:"form_controll" %>
+
   <%= f.label :email, class:"form_label" %>
   <%= f.email_field :email, class:"form_controll" %>
+
+  <%= f.label :password, class:"form_label" %>
+  <%= f.password_field :password, class:"form_controll" %>
+
+  <%= f.label :password_confirmation, "Confirmation", class:"form_label" %>
+  <%= f.password_field :password_confiramtion, class:"form_controll" %>
+
   <%= f.submit"新規登録", class:"form_btn" %>
   <% end %>
   </div>
