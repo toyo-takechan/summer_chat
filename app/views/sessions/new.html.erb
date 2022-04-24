@@ -1,5 +1,3 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
 <%= provide(:title, " login") %>
 <div class="wrapper">
   <%= render "layouts/aside" %>
@@ -14,6 +12,11 @@
 
     <%= f.label :password, class:"form_label" %>
     <%= f.password_field :password, class:"form_controll" %>
+
+    <%= f.label :remember_me, class: "#"  do %>
+      <%= f.check_box :remember_me %>
+      <span>ログイン状態を保持する。</span><br>
+    <% end %>
 
     <%= f.submit"ログイン", class:"form_btn" %>
   <% end %>
