@@ -8,6 +8,10 @@
   </div>
   <div class="header_right">
     <%= link_to "新規登録", new_user_path, class:"header_right_btn" %>
-    <%= link_to "ログイン", login_path, class:"header_right_btn"  %>
+    <% if logged_in? %>
+      <%= link_to "ログアウト", logout_path, data: { "turbo-method": :delete}  %>
+    <% else %>
+      <%= link_to "ログイン", login_path  %>
+    <% end %>
   </div>
 </header>
