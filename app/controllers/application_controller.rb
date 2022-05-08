@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
-
-    # 渡されたユーザーでログインする
+  include ApplicationHelper
 
 
 
